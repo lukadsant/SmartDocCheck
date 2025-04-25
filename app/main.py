@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.endpoints import upload
+from app.endpoints import upload,ocr
 
 app = FastAPI(title="Validador inteligente de Documentos")
 
