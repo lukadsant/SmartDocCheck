@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Validador Inteligente de Documentos</title>
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, button { display: block; margin: 10px 0; }
+    .result { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+  <h1>Validador Inteligente de Documentos</h1>
+
+  <form 
+    id="validate-form"
+    hx-post="http://localhost:8000/validate/"
+    hx-trigger="change from:#user_data, change from:#document"
+    hx-target="#result"
+    hx-encoding="multipart/form-data"
+  >
+    <label>Documento (imagem):</label>
+    <input type="file" name="document" id="document" required>
+
+    <label>Dados do usuário (ex: CPF):</label>
+    <input type="text" name="user_data" id="user_data" placeholder="088.794.450-73" required>
+  </form>
+
+  <div id="result" class="result">
+    <em>Aguardando submissão...</em>
+  </div>
+
+</body>
+</html>
