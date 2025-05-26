@@ -40,3 +40,4 @@ Este projeto visa automatizar a verificação de documentos em formulários, uti
 
 ---
 
+uvicorn app.main:app --reload
