@@ -2,35 +2,101 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Validador Inteligente de Documentos</title>
-  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    input, button { display: block; margin: 10px 0; }
-    .result { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
-  </style>
+  <title>Simulador de Abertura de Conta</title>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
 
-  <h1>Validador Inteligente de Documentos</h1>
+  <div class="bg-white shadow-xl rounded-xl p-8 max-w-md w-full space-y-6">
+    <h1 class="text-2xl font-bold text-center">Abertura de Conta Digital</h1>
 
-  <form 
-    id="validate-form"
-    hx-post="http://localhost:8000/validate/"
-    hx-trigger="change from:#user_data, change from:#document"
-    hx-target="#result"
-    hx-encoding="multipart/form-data"
-  >
-    <label>Documento (imagem):</label>
-    <input type="file" name="document" id="document" required>
+    <form 
+      id="formulario"
+      hx-post="http://localhost:8000/validate/multiple"
+      hx-encoding="multipart/form-data"
+      hx-trigger="change from:input,change from:file"
+      hx-target="#validation-feedback"
+      hx-swap="innerHTML"
+      oninput="updateUserInputs()"
+      class="space-y-4">
 
-    <label>Dados do usuário (ex: CPF):</label>
-    <input type="text" name="user_data" id="user_data" placeholder="088.794.450-73" required>
-  </form>
+      <div>
+        <label class="block font-semibold">Nome Completo</label>
+        <input 
+          type="text" 
+          id="nome" 
+          class="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
 
-  <div id="result" class="result">
-    <em>Aguardando submissão...</em>
+      <div>
+        <label class="block font-semibold">CPF</label>
+        <input 
+          type="text" 
+          id="cpf" 
+          class="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label class="block font-semibold">Foto do RG</label>
+        <input 
+          type="file" 
+          name="document"
+          accept="image/*"
+          class="w-full border rounded-lg p-2">
+      </div>
+
+      <input type="hidden" name="user_inputs" id="user_inputs">
+    </form>
+
+    <div id="validation-feedback" class="mt-4"></div>
   </div>
+
+  <script>
+    function updateUserInputs() {
+      const nome = document.getElementById('nome').value;
+      const cpf = document.getElementById('cpf').value;
+
+      const userInputs = {
+        nome: nome,
+        cpf: cpf
+      };
+
+      document.getElementById('user_inputs').value = JSON.stringify(userInputs);
+    }
+
+    // Manipular a resposta JSON e renderizar feedback + collapse
+    document.body.addEventListener('htmx:afterOnLoad', function(evt) {
+      if (evt.detail.target.id === 'validation-feedback') {
+        try {
+          const response = JSON.parse(evt.detail.xhr.responseText);
+
+          const allValidated = Object.values(response.results).every(r => r.validated);
+
+          const feedbackMsg = allValidated ? 
+            `<p class="text-green-600 font-bold">✅ Validação OK</p>` : 
+            `<p class="text-red-600 font-bold">❌ Erro na validação</p>`;
+
+          const details = `
+            <details class="mt-4">
+              <summary class="cursor-pointer text-blue-600 underline">Ver detalhes técnicos</summary>
+              <pre class="bg-gray-100 p-2 mt-2 rounded">${JSON.stringify(response, null, 2)}</pre>
+            </details>
+          `;
+
+          evt.detail.target.innerHTML = `
+            <div class="p-4 border rounded-lg shadow-md bg-white">
+              ${feedbackMsg}
+              ${details}
+            </div>
+          `;
+
+        } catch (e) {
+          evt.detail.target.innerHTML = `<p class="text-red-600">Erro ao processar resposta</p>`;
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
