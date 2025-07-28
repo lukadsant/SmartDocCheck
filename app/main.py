@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.endpoints import upload,ocr,validate,validatemultiple
+from app.endpoints import upload, ocr, validate, validatemultiple, nlp
 
 app = FastAPI(title="Validador inteligente de Documentos")
 
@@ -16,4 +16,5 @@ app.include_router(upload.router)
 app.include_router(ocr.router)
 app.include_router(validate.router)
 app.include_router(validatemultiple.router)
+app.include_router(nlp.router)
 
