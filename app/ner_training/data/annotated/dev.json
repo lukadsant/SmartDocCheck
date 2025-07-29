@@ -1,0 +1,362 @@
+[
+  {
+    "text": "Nome: Costa, Mariana, CPF: 890.856.367-85, Data de nascimento: 07/05/1950",
+    "entities": [
+      [
+        6,
+        20,
+        "NOME"
+      ],
+      [
+        27,
+        41,
+        "CPF"
+      ],
+      [
+        63,
+        73,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "Dados Pessoais: Nome: Gabriel Costa Rodrigues. CPF: 749.337.340-11. Nasc: 23/04/1959",
+    "entities": [
+      [
+        22,
+        45,
+        "NOME"
+      ],
+      [
+        52,
+        66,
+        "CPF"
+      ],
+      [
+        74,
+        84,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "Nome Completo: Bruno Lima Costa - CPF: 207.710.475-74 - Data Nasc: 07/01/1986",
+    "entities": [
+      [
+        15,
+        31,
+        "NOME"
+      ],
+      [
+        39,
+        53,
+        "CPF"
+      ],
+      [
+        67,
+        77,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "CPF: 147.719.365-77, Nome: Beatriz Pereira, Nascimento: 30/08/1980",
+    "entities": [
+      [
+        5,
+        19,
+        "CPF"
+      ],
+      [
+        27,
+        42,
+        "NOME"
+      ],
+      [
+        56,
+        66,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "Nome: Laura Lima, CPF: 455.902.554-18",
+    "entities": [
+      [
+        6,
+        16,
+        "NOME"
+      ],
+      [
+        23,
+        37,
+        "CPF"
+      ]
+    ]
+  },
+  {
+    "text": "Nome: Silva, Bruno, Data de nascimento: 22/05/1964",
+    "entities": [
+      [
+        6,
+        18,
+        "NOME"
+      ],
+      [
+        40,
+        50,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "CPF: 202.351.328-49, Data de nascimento: 24/02/1970",
+    "entities": [
+      [
+        5,
+        19,
+        "CPF"
+      ],
+      [
+        41,
+        51,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "Nome: Mariana Rodrigues Costa, CPF: 933.653.678-51, Data de nascimento: 30/04/1996",
+    "entities": [
+      [
+        6,
+        29,
+        "NOME"
+      ],
+      [
+        36,
+        50,
+        "CPF"
+      ],
+      [
+        72,
+        82,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "Dados Pessoais: Nome: Oliveira, Lucas. CPF: 324.272.763-46. Nasc: 05/08/2001",
+    "entities": [
+      [
+        22,
+        37,
+        "NOME"
+      ],
+      [
+        44,
+        58,
+        "CPF"
+      ],
+      [
+        66,
+        76,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "Nome Completo: João Pereira Pereira - CPF: 167.609.224-95 - Data Nasc: 12/08/1953",
+    "entities": [
+      [
+        15,
+        35,
+        "NOME"
+      ],
+      [
+        43,
+        57,
+        "CPF"
+      ],
+      [
+        71,
+        81,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "CPF: 266.285.320-38, Nome: Mariana Lima Nascimento, Nascimento: 16/03/1978",
+    "entities": [
+      [
+        5,
+        19,
+        "CPF"
+      ],
+      [
+        27,
+        50,
+        "NOME"
+      ],
+      [
+        64,
+        74,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "Nome: Pereira, João, CPF: 308.633.698-77",
+    "entities": [
+      [
+        6,
+        19,
+        "NOME"
+      ],
+      [
+        26,
+        40,
+        "CPF"
+      ]
+    ]
+  },
+  {
+    "text": "Nome: Laura Lima, Data de nascimento: 06/05/2004",
+    "entities": [
+      [
+        6,
+        16,
+        "NOME"
+      ],
+      [
+        38,
+        48,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "CPF: 466.392.965-27, Data de nascimento: 22/03/1955",
+    "entities": [
+      [
+        5,
+        19,
+        "CPF"
+      ],
+      [
+        41,
+        51,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "Nome: João Oliveira Almeida, CPF: 838.337.502-63, Data de nascimento: 11/11/1978",
+    "entities": [
+      [
+        6,
+        27,
+        "NOME"
+      ],
+      [
+        34,
+        48,
+        "CPF"
+      ],
+      [
+        70,
+        80,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "Dados Pessoais: Nome: Pereira, Laura. CPF: 104.551.156-74. Nasc: 14/03/1954",
+    "entities": [
+      [
+        22,
+        36,
+        "NOME"
+      ],
+      [
+        43,
+        57,
+        "CPF"
+      ],
+      [
+        65,
+        75,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "Nome Completo: Maria Costa - CPF: 423.363.332-31 - Data Nasc: 13/01/1957",
+    "entities": [
+      [
+        15,
+        26,
+        "NOME"
+      ],
+      [
+        34,
+        48,
+        "CPF"
+      ],
+      [
+        62,
+        72,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "CPF: 205.386.129-77, Nome: João Costa Souza, Nascimento: 02/11/1997",
+    "entities": [
+      [
+        5,
+        19,
+        "CPF"
+      ],
+      [
+        27,
+        43,
+        "NOME"
+      ],
+      [
+        57,
+        67,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  },
+  {
+    "text": "Nome: Maria Rodrigues, CPF: 837.529.270-17",
+    "entities": [
+      [
+        6,
+        21,
+        "NOME"
+      ],
+      [
+        28,
+        42,
+        "CPF"
+      ]
+    ]
+  },
+  {
+    "text": "Nome: Bruno Souza Santos, Data de nascimento: 13/10/1963",
+    "entities": [
+      [
+        6,
+        24,
+        "NOME"
+      ],
+      [
+        46,
+        56,
+        "DATA_NASCIMENTO"
+      ]
+    ]
+  }
+]
